@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pendataan Warga Desa</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <h2 class="title">Formulir Pendataan Warga Desa</h2>
+      <form
+        method="POST"
+        action="https://script.google.com/macros/s/AKfycbzOtapqV8ckz4GL_ZygGvV4pieU3sQFN6TpWXiTUyansSDfHu7hW6Sg0KxgHuZ8YLJ5rw/exec"
+        id="my-form"
+      >
+        <div class="form-group">
+          <label for="Nomor_KK" class="form-label"
+            >Nomor Kartu Keluarga :</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="Nomor_KK"
+            name="Nomor_KK"
+            placeholder="Masukkan Nomor Kartu Keluarga"
+            required
+            minlength="16"
+            maxlength="16"
+            pattern="\d{16}"
+            inputmode="numeric"
+            oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="NIK" class="form-label">NIK :</label>
+          <input
+            type="text"
+            class="form-control"
+            id="NIK"
+            name="NIK"
+            placeholder="Masukkan NIK"
+            required
+            minlength="16"
+            maxlength="16"
+            pattern="\d{16}"
+            inputmode="numeric"
+            oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="Nama_Lengkap" class="form-label">Nama :</label>
+          <input
+            type="text"
+            class="form-control"
+            id="Nama_Lengkap"
+            name="Nama_Lengkap"
+            placeholder="Masukkan Nama"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="Tempat_&_Tanggal_Lahir" class="form-label"
+            >Tempat & Tanggal Lahir :</label
+          >
+          <div class="input-row">
+            <input
+              type="text"
+              class="form-control"
+              id="Tempat_&_Tanggal_Lahir"
+              name="Tempat_&_Tanggal_Lahir"
+              placeholder="Masukkan Tempat Lahir"
+              required
+            />
+            <input
+              type="date"
+              class="form-control"
+              id="Tempat_&_Tanggal_Lahir"
+              name="Tempat_&_Tanggal_Lahir"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="Jenis_Kelamin" class="form-label">Jenis Kelamin :</label>
+          <select
+            class="form-select"
+            id="Jenis_Kelamin"
+            name="Jenis_Kelamin"
+            required
+          >
+            <option value="">Pilih Jenis Kelamin</option>
+            <option value="Laki-laki">Laki-laki</option>
+            <option value="Perempuan">Perempuan</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="Agama" class="form-label">Agama :</label>
+          <select class="form-select" id="Agama" name="Agama" required>
+            <option value="">Pilih Agama</option>
+            <option value="Islam">Islam</option>
+            <option value="Kristen">Kristen</option>
+            <option value="Katolik">Katolik</option>
+            <option value="Hindu">Hindu</option>
+            <option value="Buddha">Buddha</option>
+            <option value="Konghucu">Konghucu</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="Status_Perkawinan" class="form-label"
+            >Status Perkawinan :</label
+          >
+          <select
+            class="form-select"
+            id="Status_Perkawinan"
+            name="Status_Perkawinan"
+            required
+          >
+            <option value="">Pilih Status Perkawinan</option>
+            <option value="Belum Kawin">Belum Kawin</option>
+            <option value="Kawin">Kawin</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="Pendidikan_Terakhir" class="form-label"
+            >Pendidikan Terakhir :</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="Pendidikan_Terakhir"
+            name="Pendidikan_Terakhir"
+            placeholder="Masukkan Pendidikan Terakhir"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="Pekerjaan" class="form-label">Pekerjaan :</label>
+          <input
+            type="text"
+            class="form-control"
+            id="Pekerjaan"
+            name="Pekerjaan"
+            placeholder="Masukkan Pekerjaan"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="Alamat" class="form-label">Alamat :</label>
+          <textarea
+            class="form-control"
+            id="Alamat"
+            name="Alamat"
+            placeholder="Masukkan Alamat"
+            rows="3"
+            required
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="Status_dalam_keluarga" class="form-label"
+            >Status Dalam Keluarga :</label
+          >
+          <select
+            class="form-select"
+            id="Status_dalam_keluarga"
+            name="Status_dalam_keluarga"
+            required
+          >
+            <option value="">Pilih Status Dalam Keluarga</option>
+            <option value="Kepala Keluarga">Kepala Keluarga</option>
+            <option value="Istri">Istri</option>
+            <option value="Anak">Anak</option>
+            <option value="Lainnya">Lainnya</option>
+          </select>
+        </div>
+
+        <div class="form-group" style="text-align: center; margin-top: 20px">
+          <button type="submit" class="btn-submit">Simpan Data</button>
+        </div>
+      </form>
+    </div>
+
+    <script>
+      window.addEventListener("load", function () {
+        const form = document.getElementById("my-form");
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          const data = new FormData(form);
+          const action = e.target.action;
+          fetch(action, {
+            method: "POST",
+            body: data,
+          }).then(() => {
+            alert("Data berhasil dikirim!");
+            form.reset();
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
